@@ -6,9 +6,15 @@ import {Component, OnInit} from '@angular/core';
   styleUrls: ['./customer-list.component.scss']
 })
 export class CustomerListComponent implements OnInit {
-  customers : string[] ;
+  customers : string[] = [] ;
 
   ngOnInit() {
+  }
+
+  addCustomer(customerName :string){
+    if(customerName.trim()){
+      this.customers.push(customerName.trim());
+    }
   }
 
 }
